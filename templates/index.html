@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-    <title>Giorgio Lovatel - Full Stack - Portfolio</title>
+    <title>Giorgio Lovatel - Developer - Full Stack </title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <div class="jl-preloader">
         <div class="jl-preloader-inner">
             <img src="{% static 'images/lemon-loader.svg' %}" class="jl-mar-bottom-15" />
-            <p class="jl-text-light jl-mar-top-15">Aguarde um pouquinho … Estou preparando a limonada</p>
+            <p class="jl-text-light jl-mar-top-15">Wait a minute… I'm making the lemonade</p>
         </div>
     </div>
 
@@ -34,7 +34,7 @@
     <div class="jl-modal jl-bg-black" id="jl-modal-orcamento">
         <div class="jl-modal-header">
             <h1 class="jl-title jl-text-green jl-mar-bottom-15">
-                Solicite um orçamento
+                Request a quote
             </h1>
 
             <button class="jl-close-modal jl-toggle-modal">
@@ -45,9 +45,8 @@
         <div class="jl-modal-body">
             <div class="row">
                 <div class="col-sm-12">
-                    <p class="jl-text-light">Por favor informe os dados abaixo e eu entrarei em contato com você o mais
-                        breve
-                        possível.</p>
+                    <p class="jl-text-light">Please enter the details below and I will contact 
+                    you as soon as possible</p>
                 </div>
             </div>
             <div class="row jl-mar-top-15">
@@ -55,7 +54,7 @@
                     <form class="jl-form">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                <label for="Nome" class="jl-text-light">Nome</label>
+                                <label for="Nome" class="jl-text-light">Name</label>
                                 <input type="text" name="Nome" id="jl-nome" class="jl-field" />
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -63,7 +62,7 @@
                                 <input type="email" name="Email" id="jl-email" class="jl-field" />
                             </div>
                             <div class="col-sm-12 col-md-6">
-                                <label for="Telefone" class="jl-text-light">Telefone</label>
+                                <label for="Telefone" class="jl-text-light">Phone</label>
                                 <input type="tel" name="Telefone" id="jl-telefone" class="jl-field" />
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -71,15 +70,15 @@
                                 <input type="text" name="Site" id="jl-site" class="jl-field" />
                             </div>
                             <div class="col-sm-12 col-md-12 jl-mar-top-15">
-                                <label for="Mensagem" class="jl-text-light">Descreva abaixo o projeto na qual você
-                                    precisa de orçamento:</label>
+                                <label for="Mensagem" class="jl-text-light">Describe below the project in which you
+                                    need budget:</label>
                                 <textarea id="jl-mensagem" name="Mensagem" rows="8" class="jl-textarea"></textarea>
                             </div>
                         </div>
 
                         <div class="row justify-content-end jl-mar-top-15">
                             <div class="col-sm-12 col-md-6">
-                                <button class="jl-btn jl-btn-large jl-btn-green jl-btn-block">Enviar</button>
+                                <button class="jl-btn jl-btn-large jl-btn-green jl-btn-block">Send</button>
                             </div>
                         </div>
 
@@ -97,7 +96,7 @@
         <nav class="jl-menu">
             <a href="#">Home</a>
             <a href="{% url 'portfolio' %}">Portfolio</a>
-            <a href="{% url 'sobre' %}">Sobre</a>
+            <a href="{% url 'sobre' %}">About</a>
         </nav>
     </header>
 
@@ -108,12 +107,12 @@
     <nav class="jl-menu-mob jl-menu-is-closed">
         <a href="#">Home</a>
         <a href="{% url 'portfolio' %}">Portfolio</a>
-        <a href="{% url 'sobre' %}">Sobre</a>
+        <a href="{% url 'sobre' %}">About</a>
     </nav>
 
     <div class="jl-contact-info jl-bg-black jl-text-light">
         <div class="jl-contact-info-inner">
-            <h2 class="jl-title jl-text-green">Contato</h2>
+            <h2 class="jl-title jl-text-green">Contact</h2>
             <p>frigottogiorgio@gmail.com</p>
             <p>+55 (48) 9 99356645</p>
         </div>
@@ -134,16 +133,16 @@
                     <div
                         class="col-sm-12 col-md-10 offset-md-1 col-lg-4 offset-lg-1 col-xl-3 offset-xl-2 jl-display-text">
 
-                        <h1 class="jl-title jl-text-green jl-title-xlarge">Olá!</h1>
+                        <h1 class="jl-title jl-text-green jl-title-xlarge">Hi!</h1>
 
-                        <p class="jl-text-light">Meu nome é <span class="jl-text-green">Giorgio Frigotto Lovatel</span>, sou
-                            desenvolvedor <span class="jl-text-green">Full Stack</span>. Iniciei meus estudos em meados de 2020,
-                            e logo entrei no curso de Análise e Desenvolvimento de Sistemas na Faculdade Senac Florianópolis.
-                            Procuro me tornar um profissional melhor a cada dia :)
+                        <p class="jl-text-light">My name is <span class="jl-text-green">Giorgio Frigotto Lovatel</span>, I'm a
+                        <span class="jl-text-green">Full Stack Developer</span>
+                        and I currently hold the position of Junior.
+                        I try to be better every day :)
                         </p>
 
-                        <button class="jl-btn jl-btn-large jl-btn-green jl-mar-top-15 jl-toggle-modal">solicite um
-                            orçamento</button>
+                        <button class="jl-btn jl-btn-large jl-btn-green jl-mar-top-15 jl-toggle-modal">Request a
+                            budget</button>
                     </div>
                 </div>
 
@@ -158,7 +157,8 @@
             <div class="container-fluid jl-no-padding">
                 <div class="row">
                     <div class="col-sm-12 d-block d-sm-block d-lg-none jl-mar-top-30 jl-pad-top-30">
-                        <h2 class="jl-title-large jl-text-green jl-title jl-text-center">Projetos Selecionados</h2>
+                        <h2 class="jl-title-large jl-text-green jl-title jl-text-center">
+                            Selected Projects</h2>
                     </div>
                 </div>
 
@@ -204,7 +204,7 @@
                                                     Website</h1>
                                                 <p class="jl-mar-bottom-30">UX, UI e WordPress para aceleradora de
                                                     startups.</p>
-                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">ver projeto</a>
+                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">see project</a>
                                             </div>
                                         </div>
                                         <div
@@ -215,7 +215,7 @@
                                                 </div>
                                                 <img src="{% static 'images/thumb-1.jpg' %}" alt="Startup Rocketz"
                                                     title="Startup Rocketz" class="jl-scale-up" />
-                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">visitar site
+                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">Visit website
                                                     <ion-icon name="share-alt"></ion-icon></a>
                                             </div>
                                         </div>
@@ -229,7 +229,7 @@
                                                     Aplicativo Mobile</h1>
                                                 <p class="jl-mar-bottom-30">UX, UI e Protipação para aplicativo mobile.
                                                 </p>
-                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">ver projeto</a>
+                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">see project</a>
                                             </div>
                                         </div>
                                         <div
@@ -237,7 +237,7 @@
                                             <div class="jl-portfolio-item-thumb">
                                                 <div class="jl-portfolio-item-box d-none d-sm-none d-lg-block"></div>
                                                 <img src="{% static 'images/thumb-2.jpg' %}" alt="Manage It!" title="Manage It!" />
-                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">visitar site
+                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">Visit website
                                                     <ion-icon name="share-alt"></ion-icon></a>
                                             </div>
                                         </div>
@@ -252,7 +252,7 @@
                                                     Aplicativo Mobile</h1>
                                                 <p class="jl-mar-bottom-30">UX, UI e Protipação para aplicativo mobile.
                                                 </p>
-                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">ver projeto</a>
+                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">see project</a>
                                             </div>
                                         </div>
                                         <div
@@ -260,7 +260,7 @@
                                             <div class="jl-portfolio-item-thumb">
                                                 <div class="jl-portfolio-item-box d-none d-sm-none d-lg-block"></div>
                                                 <img src="{% static 'images/thumb-3.jpg' %}" alt="Vinyassa App" title="Vinyassa App" />
-                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">visitar site
+                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">Visit website
                                                     <ion-icon name="share-alt"></ion-icon></a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@
                                                     Website para agência.</h1>
                                                 <p class="jl-mar-bottom-30">Website para agência de conteúdo digital.
                                                 </p>
-                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">ver projeto</a>
+                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">see project</a>
                                             </div>
                                         </div>
                                         <div
@@ -284,7 +284,7 @@
                                                 <div class="jl-portfolio-item-box d-none d-sm-none d-lg-block"></div>
                                                 <img src="{% static 'images/thumb-4.jpg' %}" alt="Conteúdo é Rei!"
                                                     title="Conteúdo é Rei!" />
-                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">visitar site
+                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">Visit website
                                                     <ion-icon name="share-alt"></ion-icon></a>
                                             </div>
                                         </div>
@@ -298,7 +298,7 @@
                                                 <h1 class="jl-title jl-title-large jl-mar-bottom-15">Controle Total. Web
                                                     App</h1>
                                                 <p class="jl-mar-bottom-30">UX, UI e Protipação para aplicativo web.</p>
-                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">ver projeto</a>
+                                                <a href="#" class="jl-btn jl-btn-large jl-btn-green">see project</a>
                                             </div>
                                         </div>
                                         <div
@@ -307,7 +307,7 @@
                                                 <div class="jl-portfolio-item-box d-none d-sm-none d-lg-block"></div>
                                                 <img src="{% static 'images/thumb-5.jpg' %}" alt="Controle Total"
                                                     title="Controle Total" />
-                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">visitar site
+                                                <a href="#" class="jl-btn jl-btn-medium jl-btn-dark">Visit website
                                                     <ion-icon name="share-alt"></ion-icon></a>
                                             </div>
                                         </div>
