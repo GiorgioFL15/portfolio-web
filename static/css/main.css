@@ -503,7 +503,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     }
 
     .jl-home-presentation {
-        background-image: linear-gradient(rgba(12, 11, 11, 0.657), rgba(12, 11, 11, 0.657)),url('../images/giorgio.png');
+        background-image:linear-gradient(rgba(0, 0, 0, 0.657), rgba(0, 0, 0, 0.657)), url('../images/giorgio.png');
         background-repeat: no-repeat;
         background-position: 50% bottom;
         position: relative;

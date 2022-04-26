@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,400i,700,700i,800,800i&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.min.css' %}" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="{% static 'https://unpkg.com/aos@2.3.1/dist/aos.css' %}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
@@ -32,13 +32,13 @@
 
     <header class="jl-topbar">
         <div class="jl-logo jl-logo-big">
-            <img src="{% static 'images/logo.svg %}" alt="Logo João Lemon UX/UI Designer" />
+            <img src="{% static 'images/logo.png' %}" alt="Logo João Lemon UX/UI Designer" />
         </div>
 
         <nav class="jl-menu">
-            <a href="index.html">Home</a>
-            <a href="#">Portfolio</a>
-            <a href="pages/sobre.html">Sobre</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'portfolio' %}">Portfolio</a>
+            <a href="{% url 'sobre' %}">Sobre</a>
         </nav>
     </header>
 
@@ -47,16 +47,16 @@
     </button>
 
     <nav class="jl-menu-mob jl-menu-is-closed">
-        <a href="#">Home</a>
-        <a href="pages/portfolio.html">Portfolio</a>
-        <a href="pages/sobre.html">Sobre</a>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url  'portfolio' %}">Portfolio</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
     </nav>
 
     <div class="jl-contact-info jl-bg-black jl-text-light">
         <div class="jl-contact-info-inner">
             <h2 class="jl-title jl-text-green">Contato</h2>
-            <p>hello@joaolemon.com</p>
-            <p>+55 (00) 9 9999 8888</p>
+            <p>frigottogiorgio@gmail.com</p>
+            <p>+55 (48) 9 9935 6645</p>
         </div>
         <div class="jl-corner">
         </div>
@@ -73,14 +73,13 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-4 order-2 order-lg-1 jl-avatar-sobre">
                         <div class="jl-box-img">
-                            <img src="{% static 'images/joao-lemon-designer-sobre.png' %}" alt="Joao Lemon Designer"
-                                title="Joao Lemon Designer" class="jl-img-responsive" />
+                            <section class="jl-full-height jl-first-section jl-home-presentation" id="jl-home-presentation">
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-8 order-1 order-lg-2">
                         <div class="jl-titulo-sobre jl-mar-bottom-30">
                             <h1 class="jl-title jl-title-xlarge jl-text-light">
-                                João <span class="jl-text-green">Lemon</span>
+                                Giorgio <span class="jl-text-green">Lovatel</span>
                             </h1>
                         </div>
                         <div class="jl-info-sobre jl-text-light">
@@ -105,9 +104,9 @@
                                         <ion-icon name="logo-dribbble"></ion-icon>
                                     </a>
                                 </div>
-                                <p>hello@<span class="jl-text-green">joaolemon</span>.com</p>
+                                <p>frigottogiorgio<span class="jl-text-green">@gmail</span>.com</p>
                                 <br />
-                                <p>+55 (00) 9 9999 8888</p>
+                                <p>+55 (48) 9 9935 6645</p>
                             </div>
                         </div>
                         <div class="jl-premios-sobre">
