@@ -1,10 +1,13 @@
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from posix import environ
 from pydoc import describe
 import smtplib
 from django.shortcuts import get_object_or_404, render
 from principal.models import Form
 from smtplib import SMTP
+import os 
+import environ
 
 def index(request):
 
@@ -28,7 +31,7 @@ def send_email(to: str, name: str,):
         # DESATIVAR MODO DE SEGURANÇA DA CONTA
         server.ehlo()
         server.starttls() # start transport layer security
-        server.login('frigottogiorgio@gmail.com', '96599685gg')
+        server.login(os.environ.get('EMAIL_LOGIN'),os.environ.get('EMAIL_SENHA'))
         # ESTRUTURA DA ENVIO DE MSG
         msg_text = f"""<h3>Que incrivel!! Vejo que se interessou pelo meu trabalho!</h3>
         <p>Olá {name}, Tudo bem com você?</p>

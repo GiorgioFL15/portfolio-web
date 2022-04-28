@@ -9,26 +9,25 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
-from pathlib import Path
 import os
+from pathlib import Path
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-fs))%)j=blyl7)39wcj&3c&oymj+8!2=e#xalz=7r3lfff*=l&'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", default=True)
 
-ALLOWED_HOSTS = []
-
-
+ALLOWED_HOSTS = ['*']
+381960
 # Application definition
 
 INSTALLED_APPS = [
@@ -75,16 +74,22 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+DATABASE_HOST = os.environ.get('DB_HOST')
+DATABASE_PORT = os.environ.get('DB_PORT')
+DATABASE_NAME = os.environ.get('DB_NAME')
+DATABASE_USER = os.environ.get('DB_USER')
+DATABASE_PASSWORD = os.environ.get('DB_PASSWORD')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'example',
-        'HOST': 'localhost'
+        'NAME': DATABASE_NAME,
+        'USER': DATABASE_USER,
+        'PASSWORD': DATABASE_PASSWORD,
+        'HOST': DATABASE_HOST,
+        'PORT': DATABASE_PORT,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
